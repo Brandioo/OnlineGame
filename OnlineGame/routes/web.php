@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Web\AuthController;
+use App\Http\Controllers\Web\DashboardController;
+use App\Http\Controllers\Web\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index'])->name('pages.home');
+
+Route::get('login', [\App\Http\Controllers\Web\AuthController::class, 'login'])->name('login') ;
+Route::get('register', [\App\Http\Controllers\Web\AuthController::class, 'register'])->name('register');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');

@@ -1,48 +1,55 @@
-<?php get_header();?>
-   <div class="container">
-        <div class="banner row">
-            <div class="col-sm-12 col-md-6">
-                <h1 class="heading">Great <span class="secondary-color">design</span> is the language we speak</h1>
-            </div>
-            <div class="col-sm-12 col-md-6">
-                <p class="text-block">
-                    We are a leading branding agency. We lead the creative strategies and development process for our clients. 
-                    Our initial product and strategy workshops will deliver a much better understanding of your customer’s needs. 
-                    We help brands to feel social by default optimize for generations of consumers wanting to connect with people with brands.
-                </p>
-            </div>
-        </div>
+<?php
 
-        <div class="posts">
-            <div class="row">
-                <h5>Latest Posts</h5>
-            </div>
-            <br>
-            <div class="row mb-2">
-                <?php if(have_posts()):?>
-                    <?php while ( have_posts() ) : the_post(); ?>
+use Illuminate\Contracts\Http\Kernel;
+use Illuminate\Http\Request;
 
-                        <?php get_template_part("template-parts/content")?>
+define('LARAVEL_START', microtime(true));
 
-                    <?php endwhile;?>
-                <?php else:?>
-                    <div class="col-12">
-                        <div class="text-center">
-                            <h1>No content found!</h1>
-                        </div>
-                    </div>
-                <?php endif;?>
-            </div>
-        </div>
+/*
+|--------------------------------------------------------------------------
+| Check If The Application Is Under Maintenance
+|--------------------------------------------------------------------------
+|
+| If the application is in maintenance / demo mode via the "down" command
+| we will load this file so that any pre-rendered content can be shown
+| instead of starting the framework, which could cause an exception.
+|
+*/
 
-        <div class="contact">
-            <div class="inner">
-                <div class="bg-text">
-                    Get in touch
-                    <a href="#">gonlinesoftware@gmail.com</a>
-                </div>
-            </div>
-        </div>
-    </div>
+if (file_exists(__DIR__.'/../storage/framework/maintenance.php')) {
+    require __DIR__.'/../storage/framework/maintenance.php';
+}
 
-<?php get_footer();?>
+/*
+|--------------------------------------------------------------------------
+| Register The Auto Loader
+|--------------------------------------------------------------------------
+|
+| Composer provides a convenient, automatically generated class loader for
+| this application. We just need to utilize it! We'll simply require it
+| into the script here so we don't need to manually load our classes.
+|
+*/
+
+require __DIR__.'/../vendor/autoload.php';
+
+/*
+|--------------------------------------------------------------------------
+| Run The Application
+|--------------------------------------------------------------------------
+|
+| Once we have the application, we can handle the incoming request using
+| the application's HTTP kernel. Then, we will send the response back
+| to this client's browser, allowing them to enjoy our application.
+|
+*/
+
+$app = require_once __DIR__.'/../bootstrap/app.php';
+
+$kernel = $app->make(Kernel::class);
+
+$response = tap($kernel->handle(
+    $request = Request::capture()
+))->send();
+
+$kernel->terminate($request, $response);
