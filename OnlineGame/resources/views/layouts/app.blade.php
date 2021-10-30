@@ -12,6 +12,10 @@
         @yield('content')
     </div>
 
+    <div class="page-flex">
+        @include('partials.sidebar')
+    </div>
+
     @include('partials.scripts')
     @include('partials.footer')
     @yield('afterScripts')

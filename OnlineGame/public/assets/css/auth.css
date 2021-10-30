@@ -1,0 +1,14 @@
+body{
+    background-color: #2d3748;
+}
+.p {
+    text-align: center;
+}
+
+.container {
+    max-width: 450px;
+}
+
+.push-top {
+    margin-top: 50px;
+}

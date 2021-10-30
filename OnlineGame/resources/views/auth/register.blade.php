@@ -1,4 +1,3 @@
-<?php?>
 @extends('layouts.auth')
 
 @section('bottomHead')
@@ -10,17 +9,18 @@
         <div class="col-lg-12 margin-tb">
             <div class="push-top">
                 <h2 style="text-align: center">GET STARTED</h2>
-                <p>Start creating the best possible user experienc for you.</p>
+                <p>Start Creating The Best Possible User Experience 4 You.</p>
             </div>
         </div>
     </div>
-    <style>
-        .container {
-            max-width: 450px;
-        }
 
+    <style>
         .push-top {
             margin-top: 50px;
+        }
+
+        .container {
+            max-width: 450px;
         }
     </style>
 
