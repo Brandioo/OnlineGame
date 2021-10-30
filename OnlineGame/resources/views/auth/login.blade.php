@@ -1,6 +1,6 @@
-@extends('layout.auth')
+@extends('layouts.auth')
 
-@section('bottomHead')
+@section('afterStyles')
     <link href="{{ asset('assets/css/auth.css')}}" rel="stylesheet">
 @endsection
 
@@ -32,4 +32,10 @@
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+@endsection
+
+@section('afterScripts')
+    <script>
+        alert('hello brand');
+    </script>
 @endsection

@@ -1,5 +1,5 @@
 <?php?>
-@extends('layout.auth')
+@extends('layouts.auth')
 
 @section('content')
     <div class="row">
