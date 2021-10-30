@@ -34,8 +34,8 @@
         </form>
 @endsection
 
-@section('afterScripts')
     <script>
         alert('Hello!');
     </script>
+@section('afterScripts')
 @endsection
