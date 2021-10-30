@@ -36,6 +36,6 @@
 
 @section('afterScripts')
     <script>
-        alert('hello brand');
+        alert('Hello!');
     </script>
 @endsection
