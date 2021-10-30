@@ -1,5 +1,5 @@
 <?php?>
-@extends('layout.layout')
+@extends('layout.auth')
 
 @section('content')
     <div class="row">
@@ -8,7 +8,7 @@
                 <h2>Add New User</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('users.index') }}"> Back </a>
+                <a class="btn btn-primary" href="{{ route('login') }}"> Back </a>
             </div>
         </div>
     </div>
@@ -37,7 +37,7 @@
                     </ul>
                 </div><br/>
             @endif
-            <form id="forma" method="post" action="{{ route('register.post') }}">
+            <form id="forma" method="post">
                 <div class="form-group">
                     @csrf
                     <label for="name">Name</label>
@@ -56,23 +56,6 @@
                     <select onchange="changeRole()" id="roleSelect" name="role" form="forma">
                         <option value="customer">customer</option>
                         <option value="employee">employee</option>
-                    </select>
-                </div>
-
-                <div style="display: none;" id="agencyDiv" class="form-group">
-                    <label for="agency_id">Agency</label>
-                    <select name="agency_id" form="forma">
-                        @foreach($agencies as $agency)
-                            <option value="{{$agency->id}}" > {{$agency->name}}</option>
-                        @endforeach
-                    </select>
-                </div>
-                <div id="customerDiv" class="form-group">
-                    <label for="customer_id">Customer</label>
-                    <select name="customer_id" form="forma">
-                        @foreach($customers as $custmer)
-                            <option value="{{$custmer->id}}" > {{$custmer->first_name}}</option>
-                        @endforeach
                     </select>
                 </div>
                 <button type="submit" class="btn btn-block btn-danger">Create User</button>
