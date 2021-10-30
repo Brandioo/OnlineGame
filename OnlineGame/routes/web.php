@@ -18,3 +18,25 @@ Route::get('/', function () {
 });
 Route::get("login",[\App\Http\Controllers\Web\AuthController::class, 'login'])->name('login') ;
 Route::get('register', [\App\Http\Controllers\Web\AuthController::class, 'register'])->name('register');
+
+//Route::get("app",[\App\Http\Controllers\Web\AuthController::class, 'app'])->name('app') ;
+//Route::get('auth', [\App\Http\Controllers\Web\AuthController::class, 'auth'])->name('auth');
+
+
+Route::get('/', function()
+{
+    return View::make('pages.home');
+});
+Route::get('about', function()
+{
+    return View::make('pages.about');
+});
+Route::get('projects', function()
+{
+    return View::make('pages.projects');
+});
+Route::get('contact', function()
+{
+    return View::make('pages.contact');
+});
+
