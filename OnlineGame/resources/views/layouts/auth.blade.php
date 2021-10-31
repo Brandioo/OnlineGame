@@ -5,12 +5,14 @@
     @yield('afterStyles')
 </head>
 <body>
-@include('partials.header')
-@include('partials.sidebar')
+{{--@include('partials.header')--}}
+{{--@include('partials.sidebar')--}}
 <div class="container mt-4">
     @yield('content')
 </div>
 
 @include('partials.footer')
+@include('partials.scripts')
+@yield('afterScripts')
 </body>
 </html>

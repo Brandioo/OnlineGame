@@ -1,58 +1,34 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Symfony\Component\HttpFoundation\Response;
-use Laravel\Passport\HasApiTokens;
 
 class AuthController extends Controller
 {
-    use HasApiTokens, Notifiable;
+    use Notifiable;
+
+    public function __construct()
+    {
+        $this->middleware('auth:api', ['except' => ['login', 'register']]);
+    }
 
     public function register(Request $request)
     {
-       return User::create([
+        $user = User::create([
             'first_name' => $request->input('first_name'),
             'last_name' => $request->input('last_name'),
             'birthday' => $request->input('birthday'),
             'email' => $request->input('email'),
             'password' => Hash::make($request->input('password'))
         ]);
-    }
-//
-//    public function login(Request $request)
-//    {
-//       if (!Auth::attempt($request->only('email','password'))) {
-//           return response([
-//               'message' => 'Access Denied! Invalid Credentials.'
-//           ], Response::HTTP_UNAUTHORIZED);
-//       }
-//
-//       $user = Auth::user();
-//
-//       $token = $user->createToken('token')->plainTextToken;
-//
-//       $cookie = cookie('jwt', $token, 60 * 24);
-//
-//       return response([
-//           'message' => $token
-//       ])->withCookie($cookie);
-//    }
-//
-//
-//    public function user()
-//    {
-//        return Auth::user();
-//    }
 
-    public function __construct()
-    {
-        $this->middleware('auth:api', ['except' => ['login']]);
+        return $this->respondWithToken(auth()->tokenById($user->id));
     }
 
     public function login(): \Illuminate\Http\JsonResponse
@@ -69,8 +45,6 @@ class AuthController extends Controller
 
     public function me(): \Illuminate\Http\JsonResponse
     {
-
-        return response()->json(request()->all());
         return response()->json(auth()->user());
     }
 

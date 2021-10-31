@@ -1,6 +1,6 @@
 @extends('layouts.auth')
 
-@section('bottomHead')
+@section('afterStyles')
     <link href="{{ asset('assets/css/auth.css')}}" rel="stylesheet">
 @endsection
 
@@ -39,9 +39,8 @@
                 </div><br/>
             @endif
 
-            <form id="forma" method="post">
+            <form id="loginForm">
                 <div class="form-group">
-                    @csrf
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="text" class="form-control" name="email"/>
@@ -56,4 +55,42 @@
             </form>
         </div>
     </div>
+@endsection
+
+@section('afterScripts')
+    <script>
+        $(document).ready(function () {
+            $("#loginForm").submit(function (event) {
+                event.preventDefault();
+
+                var formData = {
+                    email: $("input[name=email]").val(),
+                    password: $("input[name=password]").val(),
+                };
+
+                $.ajax({
+                    type: "POST",
+                    url: "http://localhost:8000/api/login",
+                    beforeSend: function(request) {
+                        request.setRequestHeader("Accept", 'application/json');
+                        request.setRequestHeader("'Content-Type'", 'application/json');
+                    },
+                    data: formData,
+                    dataType: "json",
+                    encode: true,
+                    success: function (data) {
+                        console.log(data);
+                        alert('succes');
+                    },
+                    error: function (xhr) {
+                        alert('error');
+                    }
+                }).done(function (data) {
+                    console.log(data);
+                });
+
+
+            });
+        });
+    </script>
 @endsection

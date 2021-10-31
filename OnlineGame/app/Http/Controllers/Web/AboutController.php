@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 
 class AboutController extends Controller
 {
-
     public function about()
     {
         return view('/pages/about');
@@ -16,5 +15,4 @@ class AboutController extends Controller
     {
         return view('/pages/contact');
     }
-
 }
