@@ -2,23 +2,13 @@
 <html>
 <head>
     @include('partials.head')
-    @include('partials.header')
-    @yield('afterScripts')
-    {{--    We set this '@' if we want to set other codes in middle of partials.head and '@yield'--}}
+    @yield('afterStyles')
 </head>
 <body>
     <div class="container mt-4">
         @yield('content')
     </div>
 
-    <div class="page-flex">
-        @include('partials.sidebar')
-    </div>
-
-    @include('partials.scripts')
-    @include('partials.footer')
-    @yield('afterScripts')
-    {{--    We set this '@' if we want to set other codes in middle of partials.head and '@yield'--}}
+{{--    @include('s')--}}
 </body>
-
 </html>

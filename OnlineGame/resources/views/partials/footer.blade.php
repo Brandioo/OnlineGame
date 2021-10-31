@@ -1,19 +1,13 @@
-<style>
-    .copyright{
-        text-align: center;
-    }
-</style>
-
+<!-- ! Footer -->
 <footer class="footer">
     <div class="container footer--flex">
         <div class="footer-start">
-            <p class="copyright">© Copyright 2021 GONLINE
-                <a href="https://gonlinepro.com/" target="_blank" rel="noopener noreferrer">
-                    gonlinepro.com</a></p>
+            <p>2021 © Elegant Dashboard - <a href="elegant-dashboard.com" target="_blank" rel="noopener noreferrer">elegant-dashboard.com</a></p>
         </div>
         <ul class="footer-end">
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="##">About</a></li>
+            <li><a href="##">Support</a></li>
+            <li><a href="##">Puchase</a></li>
         </ul>
     </div>
 </footer>
