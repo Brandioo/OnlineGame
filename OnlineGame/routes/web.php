@@ -17,11 +17,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('home', [HomeController::class, 'home'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('pages.home');
 
-Route::get('login', [\App\Http\Controllers\Web\AuthController::class, 'login'])->name('login') ;
-Route::get('register', [\App\Http\Controllers\Web\AuthController::class, 'register'])->name('register');
+Route::get('login', [AuthController::class, 'login'])->name('login') ;
+Route::get('register', [AuthController::class, 'register'])->name('register');
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 
-Route::get('about', [\App\Http\Controllers\Web\AboutController::class, 'about'])->name('about');
-Route::get('contact', [\App\Http\Controllers\Web\AboutController::class, 'contact'])->name('contact');
+
+Route::get('about', [AboutController::class, 'about'])->name('about');
+Route::get('contact', [AboutController::class, 'contact'])->name('contact');
