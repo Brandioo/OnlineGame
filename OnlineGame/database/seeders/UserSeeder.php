@@ -23,6 +23,30 @@ class UserSeeder extends Seeder
             'birthday' => date::parse(),
             'email' => Str::random(10) . '@gmail.com',
             'password' => Hash::make('password'),
+
+            'first_name' => Str::random(10),
+            'last_name' => Str::random(10),
+            'birthday' => date::parse(),
+            'email' => Str::random(10) . '@yahoo.com',
+            'password' => Hash::make('password'),
+
+            'first_name' => Str::random(10),
+            'last_name' => Str::random(10),
+            'birthday' => date::parse(),
+            'email' => Str::random(10) . '@outlook.com',
+            'password' => Hash::make('password'),
+
+            'first_name' => Str::random(10),
+            'last_name' => Str::random(10),
+            'birthday' => date::parse(),
+            'email' => Str::random(10) . '@hotmail.com',
+            'password' => Hash::make('password'),
+
+            'first_name' => Str::random(10),
+            'last_name' => Str::random(10),
+            'birthday' => date::parse(),
+            'email' => Str::random(10) . '@test.com',
+            'password' => Hash::make('password'),
         ]);
     }
 }
