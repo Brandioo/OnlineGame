@@ -24,6 +24,10 @@ class CreateUsersTable extends Migration
             $table->integer('money_balance')->nullable();
             $table->timestamps();
         });
+        Schema::table('users', function (Blueprint $table) {
+            $table->softDeletes();
+        });
+
     }
 
     /**

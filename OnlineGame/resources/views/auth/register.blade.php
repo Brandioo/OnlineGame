@@ -1,7 +1,7 @@
 @extends('layouts.auth')
 
 @section('bottomHead')
-    <link href="{{ asset('assets/css/auth.css')}}" rel="stylesheet">
+    <link href="{{ asset('assets/css/register.css')}}" rel="stylesheet">
 @endsection
 
 @section('content')
