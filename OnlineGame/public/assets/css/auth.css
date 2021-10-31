@@ -1,1 +1,13 @@
+.p {
+    text-align: center;
+}
+
+.container {
+    max-width: 450px;
+}
+
+.push-top {
+    margin-top: 50px;
+}
+
 
