@@ -10,4 +10,8 @@
     margin-top: 50px;
 }
 
+.error {
+    display: none;
+    color: red;
+}
 

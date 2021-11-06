@@ -16,25 +16,22 @@
 
     <div class="card push-top">
         <div class="card-body">
-            @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div><br/>
-            @endif
+                <div class="alert alert-danger error">
+                    <p class="alert__main"></p>
+                </div>
+            <br/>
 
             <form id="loginForm">
                 <div class="form-group">
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="text" class="form-control" name="email"/>
+                        <span class="error"></span>
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
                         <input type="password" class="form-control" name="password"/>
+                        <span class="error"></span>
                         <p>Remember me next time</p>
                     </div>
                     <button type="submit" class="btn btn-primary btn-block">Sign In</button>
@@ -46,6 +43,9 @@
 
 @section('afterScripts')
     <script>
+
+        isTokenPresent();
+
         $(document).ready(function () {
             $("#loginForm").submit(function (event) {
                 event.preventDefault();
@@ -54,20 +54,34 @@
 
                 $.ajax({
                     type: "POST",
-                    url: "http://localhost:8000/api/login",
+                    url: base_api_url + "/login",
                     beforeSend: function(request) {
                         request.setRequestHeader("Accept", 'application/json');
                         request.setRequestHeader("'Content-Type'", 'application/json');
+
+                        $('.error').hide();
+                        $('.error').siblings('input').removeClass('is-invalid');
                     },
                     data: $(event.currentTarget).serializeArray(),
                     dataType: "json",
                     encode: true,
                     success: function (data) {
                         console.log(data);
-                        alert('succes');
+                        alert('You have been successfully logged in!');
+                        sessionStorage.setItem('token', data.access_token);
+                        window.location = `${base_url}/dashboard`
                     },
                     error: function (xhr) {
-                        alert('error');
+
+                        $('.alert.alert-danger').show();
+                        $('.alert p.alert__main').text(xhr.responseJSON.message);
+
+                        if(xhr.responseJSON.errors) {
+                            $.each(xhr.responseJSON.errors, function (key, valueAsArray) {
+                                $(`input[name=${key}]`).addClass('is-invalid');
+                                $(`input[name=${key}]`).siblings('span.error').text(valueAsArray.join("\n")).show();
+                            })
+                        }
                     }
                 }).done(function (data) {
                     console.log(data);

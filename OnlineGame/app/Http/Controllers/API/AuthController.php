@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\LoginRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Notifications\Notifiable;
@@ -31,7 +32,7 @@ class AuthController extends Controller
         return $this->respondWithToken(auth()->tokenById($user->id));
     }
 
-    public function login(): \Illuminate\Http\JsonResponse
+    public function login(LoginRequest $request): \Illuminate\Http\JsonResponse
     {
         $credentials = request(['email', 'password']);
 
