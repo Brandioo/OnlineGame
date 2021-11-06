@@ -18,38 +18,22 @@ class Hero extends Model
         'name',
         'kind_id',
         'user_id',
-        'strength',
-        'power',
-        'health_points',
-        'attack_points',
-        'performed_fights',
+        'current_health_points',
+        'max_health_points',
+        'current_strength_points',
+        'current_money',
         'items_possessed',
-        'money_balance'
+        'performed_fights',
+        'money_tranfers',
+        'power',
+        'attack_points'
     ];
 
     public function user(){
         return $this->belongsTo(User::class);
     }
 
-    public function fights(){
-        return $this->hasMany(Fight:class);
-    }
-
     public function kind(){
         return $this->hasOne(Kind::class);
     }
-
-    public function transactions(){
-        return $this->hasMany(Transaction:class);
-    }
-
-    public function herosHistory(){
-        return $this->hasMany(HeroHistory:class);
-    }
-
-    public function itemsHistory(){
-        return $this->hasMany(ItemHistory::class);
-    }
-
 }
-

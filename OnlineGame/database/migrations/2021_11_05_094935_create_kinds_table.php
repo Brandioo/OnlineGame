@@ -16,9 +16,10 @@ class CreateKindsTable extends Migration
         Schema::create('kinds', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('health_points');
-            $table->integer('strength_points');
-            $table->float('money');
+            $table->integer('current_health_points');
+            $table->integer('max_health_points');
+            $table->integer('current_strength_points');
+            $table->float('current_money');
             $table->integer('items_possessed');
 
             $table->softDeletes();

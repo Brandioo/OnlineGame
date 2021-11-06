@@ -16,9 +16,10 @@ class Kind extends Model
 
     protected $fillable = [
         'name',
-        'health_points',
-        'strength_points',
-        'money',
+        'current_health_points',
+        'max_health_points',
+        'current_strength_points',
+        'current_money',
         'items_possessed'
     ];
 

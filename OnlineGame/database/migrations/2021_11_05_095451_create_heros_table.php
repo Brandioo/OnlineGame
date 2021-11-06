@@ -18,19 +18,21 @@ class CreateHerosTable extends Migration
             $table->unsignedBigInteger('kind_id');
             $table->unsignedBigInteger('user_id');
             $table->string('name');
-            $table->integer('strength');
-            $table->integer('power');
-            $table->float('health_points');
-            $table->float('attack_points');
-            $table->integer('performed_fights');
+            $table->integer('current_health_points');
+            $table->integer('max_health_points');
+            $table->integer('current_strength_points');
+            $table->float('current_money');
             $table->integer('items_possessed');
-            $table->float('money_balance');
-            $table->timestamps();
+            $table->integer('performed_fights');
+            $table->float('money_tranfers');
+            $table->integer('power');
+            $table->float('attack_points');
 
             $table->softDeletes();
 
             $table->foreign('kind_id')->references('id')->on('kinds');
             $table->foreign('user_id')->references('id')->on('users');
+            $table->timestamps();
         });
     }
 

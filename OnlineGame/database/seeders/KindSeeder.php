@@ -24,13 +24,13 @@ class KindSeeder extends Seeder
                 "SpyGirl",
                 "BadBoy"
             ]),
-            'health_points' => $this->faker->numberBetween(1,100),
-            'strength_points' => $this->faker->numberBetween(1,500),
-            'money' => $this->faker->numberBetween(100,10000),
+            'current_health_points' => $this->faker->numberBetween(1,500),
+            'max_health_points' => $this->faker->numberBetween(1,5000),
+            'current_strength_points' => $this->faker->numberBetween(1,500),
+            'current_money' => $this->faker->numberBetween(100,10000),
             'items_possessed' => $this->faker->randomDigit(),
             'created_at' => now(),
             'updated_at' => now()
         ]);
-
     }
 }
