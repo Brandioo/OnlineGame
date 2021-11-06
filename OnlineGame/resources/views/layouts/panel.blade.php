@@ -21,10 +21,9 @@
         @include('partials.footer')
     </div>
 </div>
+
 @include('partials.scripts')
-{{--    We set this '@' if we want to set other codes in middle of partials.head and '@yield'--}}
-@yield('afterStyles')
-<input type="file" multiple="multiple" class="dz-hidden-input" style="visibility: hidden; position: absolute; top: 0px;
-left: 0px; height: 0px; width: 0px;">
+@yield('afterScripts')
+
 </body>
 </html>

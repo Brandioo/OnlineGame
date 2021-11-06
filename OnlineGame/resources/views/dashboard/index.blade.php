@@ -528,8 +528,35 @@
         </div>
     </main>
 @endsection
-@section('afterscripts')
+
+@section('afterScripts')
     <script>
-        console.log()
+        isNotTokenPresent();
+
+        $(document).ready(function () {
+
+
+            $.ajax({
+                type: "GET",
+                url: `${base_api_url}/me`,
+                beforeSend: function(request) {
+                    request.setRequestHeader("Accept", 'application/json');
+                    request.setRequestHeader("'Content-Type'", 'application/json');
+                    request.setRequestHeader("Authorization", `Bearer ${sessionStorage.getItem('token')}`);
+                },
+                dataType: "json",
+                encode: true,
+                success: function (data) {
+                    console.log(data);
+                    alert('succes');
+                },
+                error: function (xhr) {
+                    alert('error');
+                    redirectToLogin();
+                }
+            }).done(function (data) {
+                console.log(data);
+            });
+        })
     </script>
 @endsection
