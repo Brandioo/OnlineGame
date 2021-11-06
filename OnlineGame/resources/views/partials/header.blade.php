@@ -17,109 +17,12 @@
                 <span class="sr-only">Toggle menu</span>
                 <span class="icon menu-toggle--gray" aria-hidden="true"></span>
             </button>
-            <div class="lang-switcher-wrapper">
-                <button class="lang-switcher transparent-btn" type="button">
-                    EN
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="feather feather-chevron-down" aria-hidden="true">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                </button>
-                <ul class="lang-menu dropdown">
-                    <li><a href="##">English</a></li>
-                    <li><a href="##">French</a></li>
-                    <li><a href="##">Uzbek</a></li>
-                </ul>
-            </div>
-            <button class="theme-switcher gray-circle-btn" type="button" title="Switch theme">
-                <span class="sr-only">Switch theme</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                     class="feather feather-sun sun-icon" aria-hidden="true">
-                    <circle cx="12" cy="12" r="5"></circle>
-                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                    <line x1="1" y1="12" x2="3" y2="12"></line>
-                    <line x1="21" y1="12" x2="23" y2="12"></line>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                     class="feather feather-moon moon-icon" aria-hidden="true">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                </svg>
-            </button>
-            <div class="notification-wrapper">
-                <button class="gray-circle-btn dropdown-btn" title="To messages" type="button">
-                    <span class="sr-only">To messages</span>
-                    <span class="icon notification active" aria-hidden="true"></span>
-                </button>
-                <ul class="users-item-dropdown notification-dropdown dropdown">
-                    <li>
-                        <a href="##">
-                            <div class="notification-dropdown-icon info">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                     stroke-linejoin="round" class="feather feather-check">
-                                    <polyline points="20 6 9 17 4 12"></polyline>
-                                </svg>
-                            </div>
-                            <div class="notification-dropdown-text">
-                                <span class="notification-dropdown__title">System just updated</span>
-                                <span class="notification-dropdown__subtitle">The system has been successfully upgraded. Read more
-                  here.</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="##">
-                            <div class="notification-dropdown-icon danger">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                     stroke-linejoin="round" class="feather feather-info" aria-hidden="true">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <line x1="12" y1="16" x2="12" y2="12"></line>
-                                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                                </svg>
-                            </div>
-                            <div class="notification-dropdown-text">
-                                <span class="notification-dropdown__title">The cache is full!</span>
-                                <span class="notification-dropdown__subtitle">Unnecessary caches take up a lot of memory space and
-                  interfere ...</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="##">
-                            <div class="notification-dropdown-icon info">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                     stroke-linejoin="round" class="feather feather-check" aria-hidden="true">
-                                    <polyline points="20 6 9 17 4 12"></polyline>
-                                </svg>
-                            </div>
-                            <div class="notification-dropdown-text">
-                                <span class="notification-dropdown__title">New Subscriber here!</span>
-                                <span
-                                    class="notification-dropdown__subtitle">A new subscriber has subscribed.</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="link-to-page" href="##">Go to Notifications page</a>
-                    </li>
-                </ul>
-            </div>
             <div class="nav-user-wrapper">
                 <button href="##" class="nav-user-btn dropdown-btn" title="My profile" type="button">
                     <span class="sr-only">My profile</span>
                     <span class="nav-user-img">
-            <picture><source srcset="./img/avatar/avatar-illustrated-02.webp" type="image/webp"><img
-                    src="./img/avatar/avatar-illustrated-02.png" alt="User name"></picture>
+            <picture><source srcset="https://lwlies.com/wp-content/uploads/2017/04/avatar-2009-1108x0-c-default.jpg" type="image/webp"><img
+                    src="https://lwlies.com/wp-content/uploads/2017/04/avatar-2009-1108x0-c-default.jpg" alt="User name"></picture>
           </span>
                 </button>
                 <ul class="users-item-dropdown nav-user-dropdown dropdown">

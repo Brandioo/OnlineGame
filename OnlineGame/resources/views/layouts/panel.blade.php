@@ -3,9 +3,7 @@
 <head>
     @include('partials.head')
     <link href="{{ asset('assets/css/mainpage.css')}}" rel="stylesheet">
-    <link href="{{ asset('assets/css/sidebar.css')}}" rel="stylesheet">
-    <link href="{{ asset('assets/css/header.css')}}" rel="stylesheet">
-    <link href="{{ asset('assets/css/footer.css')}}" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css')}}" rel="stylesheet">
     @yield('afterStyles')
     {{--    We set this '@' if we want to set other codes in middle of partials.head and '@yield'--}}
 </head>

@@ -1,5 +1,15 @@
 @extends('layouts.panel')
+<html>
+<head>
+    @include('partials.head')
+    <link href="{{ asset('assets/css/style.css')}}" rel="stylesheet">
+    @yield('afterStyles')
+    {{--    We set this '@' if we want to set other codes in middle of partials.head and '@yield'--}}
+</head>
+<body>
+<div class="page-flex">
 
+    <div class="main-wrapper">
 @section('content')
     <!-- ! Main -->
         <main class="main" id="skip-target">
@@ -518,3 +528,8 @@
             </div>
         </main>
 @stop
+
+    </div>
+</div>
+</body>
+</html>

@@ -15,4 +15,9 @@ class AboutController extends Controller
     {
         return view('/pages/contact');
     }
+
+    public function settings()
+    {
+        return view('/pages/settings');
+    }
 }
