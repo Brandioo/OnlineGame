@@ -22,7 +22,8 @@ class CreateUsersTable extends Migration
             $table->date('birthday');
             $table->string('email')->unique();
             $table->string('password');
-            $table->integer('money_balance')->nullable();
+            $table->integer('money_balance')->default(0);
+            $table->integer('age')->nullable();
 
             $table->timestamps();
             $table->softDeletes();
