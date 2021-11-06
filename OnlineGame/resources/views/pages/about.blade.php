@@ -1,4 +1,5 @@
-@extends('layouts.sidebar')
+@extends('layouts.panel')
+
 @section('content')
     GONLINE About Page
 @stop

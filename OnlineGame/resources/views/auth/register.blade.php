@@ -1,32 +1,30 @@
-<?php?>
-@extends('layout.auth')
+@extends('layouts.auth')
+
+@section('bottomHead')
+    <link href="{{ asset('assets/css/register.css')}}" rel="stylesheet">
+@endsection
 
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>Add New User</h2>
-            </div>
-            <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('login') }}"> Back </a>
+            <div class="push-top">
+                <h2 style="text-align: center">GET STARTED</h2>
+                <p>Start Creating The Best Possible User Experience For You.</p>
             </div>
         </div>
     </div>
-    <style>
-        .container {
-            max-width: 450px;
-        }
 
+    <style>
         .push-top {
             margin-top: 50px;
+        }
+
+        .container {
+            max-width: 450px;
         }
     </style>
 
     <div class="card push-top">
-        <div class="card-header">
-            Add Customers
-        </div>
-
         <div class="card-body">
             @if ($errors->any())
                 <div class="alert alert-danger">
@@ -44,36 +42,23 @@
                     <input type="text" class="form-control" name="name"/>
                 </div>
                 <div class="form-group">
+                    <label for="email">Team</label>
+                    <input type="text" class="form-control" name="team"/>
+                </div>
+                <div class="form-group">
                     <label for="email">Email</label>
                     <input type="text" class="form-control" name="email"/>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
                     <input type="password" class="form-control" name="password"/>
+                    <p>Remember me next time</p>
                 </div>
-                <div class="form-group" form="forma">
-                    <label for="role">Choose a Role:</label>
-                    <select onchange="changeRole()" id="roleSelect" name="role" form="forma">
-                        <option value="customer">customer</option>
-                        <option value="employee">employee</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-block btn-danger">Create User</button>
+                <button type="submit" class="btn btn-primary btn-block">Sign In</button>
             </form>
         </div>
     </div>
+    <div class="pull-right">
+        <a class="btn btn-primary" href="{{ route('login') }}"> Back </a>
+    </div>
 @endsection
-<script>
-
-    function changeRole() {
-
-        var selected = document.getElementById('roleSelect').value;
-        if (selected === 'customer') {
-            document.getElementById('customerDiv').style.display = 'block';
-            document.getElementById('agencyDiv').style.display = 'none';
-        } else {
-            document.getElementById('agencyDiv').style.display = 'block';
-            document.getElementById('customerDiv').style.display = 'none';
-        }
-    }
-</script>

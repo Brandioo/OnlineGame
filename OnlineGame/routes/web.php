@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\Web\AboutController;
+use App\Http\Controllers\Web\AuthController;
+use App\Http\Controllers\Web\DashboardController;
+use App\Http\Controllers\Web\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,30 +17,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get("login",[\App\Http\Controllers\Web\AuthController::class, 'login'])->name('login') ;
-Route::get('register', [\App\Http\Controllers\Web\AuthController::class, 'register'])->name('register');
+Route::get('/', [HomeController::class, 'index'])->name('pages.home');
 
-//Route::get("app",[\App\Http\Controllers\Web\AuthController::class, 'app'])->name('app') ;
-//Route::get('auth', [\App\Http\Controllers\Web\AuthController::class, 'auth'])->name('auth');
+Route::get('login', [AuthController::class, 'login'])->name('login') ;
+Route::get('register', [AuthController::class, 'register'])->name('register');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 
 
-Route::get('/', function()
-{
-    return View::make('pages.home');
-});
-Route::get('about', function()
-{
-    return View::make('pages.about');
-});
-Route::get('projects', function()
-{
-    return View::make('pages.projects');
-});
-Route::get('contact', function()
-{
-    return View::make('pages.contact');
-});
-
+Route::get('about', [AboutController::class, 'about'])->name('about');
+Route::get('contact', [AboutController::class, 'contact'])->name('contact');
