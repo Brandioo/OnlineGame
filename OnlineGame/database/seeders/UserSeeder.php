@@ -19,10 +19,10 @@ class UserSeeder extends Seeder
     {
         DB::table('users')->insert([
             [
-                'first_name' => Str::random(10),
+                'first_name' => 'Goku',
                 'last_name' => Str::random(10),
                 'birthday' => date::parse(),
-                'email' => Str::random(10) . '@gmail.com',
+                'email' => 'goku@gmail.com',
                 'password' => Hash::make('password'),
             ],
             [

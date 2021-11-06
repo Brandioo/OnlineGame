@@ -9,7 +9,7 @@
         <div class="col-lg-12 margin-tb">
             <div class="push-top">
                 <h2 style="text-align: center">GET STARTED</h2>
-                <p>Start Creating The Best Possible User Experience 4 You.</p>
+                <p>Start Creating The Best Possible User Experience For You.</p>
             </div>
         </div>
     </div>

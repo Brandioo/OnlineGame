@@ -13,6 +13,7 @@
             </div>
         </div>
     </div>
+
     <div class="card push-top">
         <div class="card-body">
             @if ($errors->any())
@@ -49,10 +50,7 @@
             $("#loginForm").submit(function (event) {
                 event.preventDefault();
 
-                var formData = {
-                    email: $("input[name=email]").val(),
-                    password: $("input[name=password]").val(),
-                };
+
 
                 $.ajax({
                     type: "POST",
@@ -61,7 +59,7 @@
                         request.setRequestHeader("Accept", 'application/json');
                         request.setRequestHeader("'Content-Type'", 'application/json');
                     },
-                    data: formData,
+                    data: $(event.currentTarget).serializeArray(),
                     dataType: "json",
                     encode: true,
                     success: function (data) {
