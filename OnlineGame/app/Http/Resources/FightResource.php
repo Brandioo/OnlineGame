@@ -16,7 +16,6 @@ class FightResource extends JsonResource
     {
         return [
 
-
             'id' => $this->id,
 
             'host' => new HeroResource($this->host),

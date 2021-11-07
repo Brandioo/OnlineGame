@@ -13,10 +13,11 @@ class FightController extends Controller
     public function index()
     {
         $fights = Fight::where('host_id', Auth::id())
-            ->orWhere('guest_id',Auth::id())
+            ->orWhere('guest_id', Auth::id())
             ->get();
 
         return FightResource::collection($fights);
+
     }
 
     /**
@@ -28,18 +29,15 @@ class FightController extends Controller
     public function store(StoreFightRequest $request)
     {
         $fight = Fight::create([
-            'host_id',
-            'guest_id',
-            'winner_id',
-            'invited_at',
-            'fought_at',
-            'host_money_received',
-            'guest_money_received',
+
+            'host_id' => $request->input('host_id'),
+            'guest_id' => $request->input('guest_id'),
+            'invited_at' => date("Y-m-d H:i:s") ,
+            'fought_at' => date("Y-m-d H:i:s"),
 
         ]);
 
         if ($fight) {
-
             return new FightResource($fight);
         }
 
