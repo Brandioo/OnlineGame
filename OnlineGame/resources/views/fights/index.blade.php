@@ -1,5 +1,5 @@
 @extends('layouts.panel')
 
 @section('content')
-    GONLINE Rank Page
+    GONLINE Fights Page
 @stop

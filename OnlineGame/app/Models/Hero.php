@@ -29,11 +29,11 @@ class Hero extends Model
         'attack_points'
     ];
 
-    public function users(){
+    public function user(){
         return $this->belongsTo(User::class);
     }
 
     public function kind(){
-        return $this->hasOne(Kind::class);
+        return $this->belongsTo(Kind::class);
     }
 }

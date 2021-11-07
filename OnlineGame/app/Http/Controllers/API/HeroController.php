@@ -4,19 +4,23 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreHeroRequest;
+use App\Http\Resources\FightResource;
 use App\Http\Resources\HeroResource;
+use App\Http\Resources\KindResource;
+use App\Models\Fight;
 use App\Models\Hero;
-use http\Env\Response;
-use Illuminate\Http\Request;
+use App\Models\Kind;
 use Illuminate\Support\Facades\Auth;
 
 class HeroController extends Controller
 {
     public function index()
     {
-        $heroes = Hero::where('úser_id', Auth::id())->get();
+
+        $heroes = Hero::where('user_id', Auth::id())->get();
 
         return HeroResource::collection($heroes);
+
     }
 
       /**
