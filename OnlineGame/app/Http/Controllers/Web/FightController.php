@@ -7,18 +7,18 @@ use App\Http\Requests\CreateFightsRequest;
 use App\Models\Fight;
 use Illuminate\Http\Request;
 
-class FightHistoryController extends Controller
+class FightController extends Controller
 {
 
     public function index()
     {
         $fights = Fight::all();
-        return view('/herofights/index', compact('fights'));
+        return view('/fights/index', compact('fights'));
     }
 
     public function create()
     {
-        return view('/herofights/create');
+        return view('/fights/create');
     }
 
     /**
@@ -53,7 +53,7 @@ class FightHistoryController extends Controller
     public function show($id)
     {
         $showfight = Fight::where('id', $id)->first();
-        return view('/herofights/show', compact('showfight'));
+        return view('/fights/show', compact('showfight'));
     }
 
 
@@ -66,7 +66,7 @@ class FightHistoryController extends Controller
     public function edit($id)
     {
         $editafight = Fight::findOrFail($id);
-        return view('/herofights/edit', compact('editafight'));
+        return view('/fights/edit', compact('editafight'));
     }
 
     /**

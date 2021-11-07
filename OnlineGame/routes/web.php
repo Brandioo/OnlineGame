@@ -5,7 +5,7 @@ use App\Http\Controllers\Web\AppereanceController;
 use App\Http\Controllers\Web\AuthController;
 use App\Http\Controllers\Web\DashboardController;
 use App\Http\Controllers\Web\FightersController;
-use App\Http\Controllers\Web\FightHistoryController;
+use App\Http\Controllers\Web\FightController;
 use App\Http\Controllers\Web\HeroController;
 use App\Http\Controllers\Web\HomeController;
 use App\Http\Controllers\Web\ItemController;
@@ -32,4 +32,4 @@ Route::get('itemhistory', [ItemController::class, 'itemhistory'])->name('itemhis
 Route::get('rank', [ItemController::class, 'rank'])->name('rank');
 Route::get('users', [UsersController::class, 'users'])->name('users');
 
-Route::get('fights', [FightHistoryController::class, 'fights'])->name('fights');
+Route::get('fights', [FightController::class, 'fights'])->name('fights');
