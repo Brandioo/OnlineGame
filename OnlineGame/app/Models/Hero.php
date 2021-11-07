@@ -29,7 +29,7 @@ class Hero extends Model
         'attack_points'
     ];
 
-    public function user(){
+    public function users(){
         return $this->belongsTo(User::class);
     }
 

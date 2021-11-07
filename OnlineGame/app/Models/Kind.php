@@ -23,7 +23,7 @@ class Kind extends Model
         'items_possessed'
     ];
 
-    public function heros(){
+    public function heroes(){
         return $this->belongsToMany(Hero::class);
     }
 }

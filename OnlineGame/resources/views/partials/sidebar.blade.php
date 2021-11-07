@@ -19,11 +19,14 @@
         <div class="sidebar-body">
             <ul class="sidebar-body-menu">
                 <li>
-                    <a class="active" href="/"><span class="icon home" aria-hidden="true"></span>Dashboard</a>
+                    <a class="active" href="/"><span class="icon home" aria-hidden="true"></span>Home</a>
                 </li>
                 <li>
-                    <a class="show-cat-btn" href="/fighters">
-                        <span class="icon document" aria-hidden="true"></span>Fighters
+                    <a href="/dashboard"><span class="icon home" aria-hidden="true"></span>Dashboard</a>
+                </li>
+                <li>
+                    <a class="show-cat-btn" href="/hero">
+                        <span class="icon document" aria-hidden="true"></span>Hero
                         <span class="category__btn transparent-btn" title="Open list">
                             <span class="sr-only">Open list</span>
                             <span class="icon arrow-down" aria-hidden="true"></span>
@@ -31,7 +34,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="show-cat-btn" href="/fighthistory">
+                    <a class="show-cat-btn" href="/fights">
                         <span class="icon folder" aria-hidden="true"></span>Fight History
                         <span class="category__btn transparent-btn" title="Open list">
                             <span class="sr-only">Open list</span>
@@ -61,9 +64,6 @@
             <span class="system-menu__title">system</span>
             <ul class="sidebar-body-menu">
                 <li>
-                    <a href="/appereance"><span class="icon edit" aria-hidden="true"></span>Appearance</a>
-                </li>
-                <li>
                     <a class="show-cat-btn" href="/users">
                         <span class="icon user-3" aria-hidden="true"></span>Users
                         <span class="category__btn transparent-btn" title="Open list">
@@ -71,9 +71,6 @@
                             <span class="icon arrow-down" aria-hidden="true"></span>
                         </span>
                     </a>
-                </li>
-                <li>
-                    <a href="/settings"><span class="icon setting" aria-hidden="true"></span>Settings</a>
                 </li>
             </ul>
         </div>
