@@ -7,39 +7,39 @@
             <div class="media-content">
                 <div class="row">
                     <div class="col-lg-3">
-                        <h3 class="media-sidebar__title">Quick links</h3>
-                        <div class="media-sidebar">
-                            <ul class="quick-links">
-                                <li>
-                                    <a class="info" href="##">
-                                        <div class="quick-links-icon">
-                                            <span class="icon time-circle" aria-hidden="true"></span>
-                                        </div>
+                        <a href="{{route('heroes.create')}}" class="btn-primary btn"type="submit">Create Hero's</a>
+                       <div class="media-sidebar">
+                           <ul class="quick-links">
+                               <li>
+                                   <a class="info" href="">
+                                       <div class="quick-links-icon">
+                                           <span class="icon time-circle" aria-hidden="true"></span>
+                                       </div>
+                                       <div class="quick-links-text">
+                                           <span class="quick-links__title">Goku</span>
+                                           <span class="quick-links__subtitle">Dragon ball</span>
+                                       </div>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a class="success" href="##">
+                                       <div class="quick-links-icon">
+                                           <span class="icon google-drive" aria-hidden="true"></span>
+                                       </div>
+                                       <div class="quick-links-text">
+                                           <span class="quick-links__title">Naruto</span>
+                                           <span class="quick-links__subtitle">Naruto</span>
+                                       </div>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a class="primary" href="##">
+                                       <div class="quick-links-icon">
+                                           <span class="icon dropbox" aria-hidden="true"></span>
+                                      </div>
                                         <div class="quick-links-text">
-                                            <span class="quick-links__title">Recent files</span>
-                                            <span class="quick-links__subtitle">Recent uploaded files</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="success" href="##">
-                                        <div class="quick-links-icon">
-                                            <span class="icon google-drive" aria-hidden="true"></span>
-                                        </div>
-                                        <div class="quick-links-text">
-                                            <span class="quick-links__title">Google Drive</span>
-                                            <span class="quick-links__subtitle">Media files from Google</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="primary" href="##">
-                                        <div class="quick-links-icon">
-                                            <span class="icon dropbox" aria-hidden="true"></span>
-                                        </div>
-                                        <div class="quick-links-text">
-                                            <span class="quick-links__title">Dropbox</span>
-                                            <span class="quick-links__subtitle">Media files from Dropbox</span>
+                                            <span class="quick-links__title">SpiderMan</span>
+                                            <span class="quick-links__subtitle">Marvel</span>
                                         </div>
                                     </a>
                                 </li>
@@ -49,8 +49,8 @@
                                             <span class="icon star" aria-hidden="true"></span>
                                         </div>
                                         <div class="quick-links-text">
-                                            <span class="quick-links__title">Starred files</span>
-                                            <span class="quick-links__subtitle">Recent uploaded files</span>
+                                            <span class="quick-links__title">Vegeta</span>
+                                            <span class="quick-links__subtitle">Dargon Ball</span>
                                         </div>
                                     </a>
                                 </li>
@@ -60,11 +60,11 @@
                                             <span class="icon delete" aria-hidden="true"></span>
                                         </div>
                                         <div class="quick-links-text">
-                                            <span class="quick-links__title">Trashed files</span>
-                                            <span class="quick-links__subtitle">Recent uploaded files</span>
+                                            <span class="quick-links__title">Luffy</span>
+                                            <span class="quick-links__subtitle">One Pice</span>
                                         </div>
                                     </a>
-                                </li>
+                               </li>
                             </ul>
                             <div class="storage">
                                 <span class="storage__indicator">Free</span>

@@ -9,6 +9,7 @@ use App\Http\Controllers\Web\HomeController;
 use App\Http\Controllers\Web\ItemController;
 use App\Http\Controllers\Web\UsersController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Web\HeroesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,3 +35,4 @@ Route::get('rank', [ItemController::class, 'rank'])->name('rank');
 Route::get('appereance', [AppereanceController::class, 'appereance'])->name('appereance');
 Route::get('users', [UsersController::class, 'users'])->name('users');
 Route::get('settings', [AboutController::class, 'settings'])->name('settings');
+Route::get('heroes/create', [HeroesController::class, 'create'])->name('heroes.create');
