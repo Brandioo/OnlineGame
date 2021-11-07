@@ -12,9 +12,10 @@ class Fight extends Authenticatable
         'host_id',
         'guest_id',
         'winner_id',
+        'invited_at',
         'fought_at',
         'host_money_received',
-        'guest_money_received'
+        'guest_money_received',
     ];
 
 

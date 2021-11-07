@@ -25,6 +25,7 @@ class FightResource extends JsonResource
             'guest_id' => $this->guest_id,
             'winner' => new HeroResource($this->winner),
             'winner_id' => $this->winner_id,
+            'invited_at' => $this->invited_at,
             'fought_at' => $this->fought_at,
             'host_money_received' => $this->host_money_received,
             'guest_money_received' => $this->guest_money_received,

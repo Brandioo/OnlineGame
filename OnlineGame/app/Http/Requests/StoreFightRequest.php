@@ -24,9 +24,10 @@ class StoreFightRequest extends FormRequest
      */
     public function rules()
     {
+        //TODO-Validate host ID to be one of the heroes of auth users.
         return [
-            'host_id' => 'required|max:255|exists:heroes',
-            'guest_id' => 'required|max:255|exists:heroes',
+            'host_id' => 'required|max:255|exists:heroes,id',
+            'guest_id' => 'required|max:255|exists:heroes,id',
         ];
     }
 }

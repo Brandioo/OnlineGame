@@ -18,6 +18,7 @@ class CreateFightsTable extends Migration
             $table->unsignedBigInteger('host_id');
             $table->unsignedBigInteger('guest_id');
             $table->unsignedBigInteger('winner_id');
+            $table->timestamp('invited_at')->nullable();
             $table->timestamp('fought_at')->nullable();
             $table->integer('host_money_received')->nullable();
             $table->integer('guest_money_received')->nullable();

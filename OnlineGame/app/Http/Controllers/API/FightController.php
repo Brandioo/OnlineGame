@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreHeroRequest;
+use App\Http\Requests\StoreFightRequest;
 use App\Http\Resources\FightResource;
 use App\Models\Fight;
 use Illuminate\Support\Facades\Auth;
@@ -27,7 +27,16 @@ class FightController extends Controller
      */
     public function store(StoreFightRequest $request)
     {
-        $fight = Fight::create($request->validated());
+        $fight = Fight::create([
+            'host_id',
+            'guest_id',
+            'winner_id',
+            'invited_at',
+            'fought_at',
+            'host_money_received',
+            'guest_money_received',
+
+        ]);
 
         if ($fight) {
 
