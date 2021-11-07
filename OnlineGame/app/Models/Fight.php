@@ -20,16 +20,16 @@ class Fight extends Authenticatable
 
     public function host()
     {
-        return $this->hasOne(Hero::class);
+        return $this->belongsTo(Hero::class, 'host_id');
     }
 
     public function guest()
     {
-        return $this->hasOne(Hero::class);
+        return $this->belongsTo(Hero::class, 'guest_id');
     }
 
     public function winner()
     {
-        return $this->hasOne(Hero::class);
+        return $this->belongsTo(Hero::class, 'winner_id');
     }
 }
