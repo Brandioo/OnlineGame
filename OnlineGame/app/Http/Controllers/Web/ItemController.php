@@ -12,4 +12,9 @@ class ItemController extends Controller
         return view('/pages/itemhistory');
     }
 
+    public function rank()
+    {
+        return view('/pages/rank');
+    }
+
 }
