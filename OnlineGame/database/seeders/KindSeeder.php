@@ -17,20 +17,29 @@ class KindSeeder extends Seeder
     public function run()
     {
         $this->faker = FAKER::create();
-        DB::table('kinds')->insert([
-            'name' => $this->faker->randomElement([
-                "SpiderMan",
-                "SuperMan",
-                "SpyGirl",
-                "BadBoy"
-            ]),
-            'current_health_points' => $this->faker->numberBetween(1,500),
-            'max_health_points' => $this->faker->numberBetween(1,5000),
-            'current_strength_points' => $this->faker->numberBetween(1,500),
-            'current_money' => $this->faker->numberBetween(100,10000),
-            'items_possessed' => $this->faker->randomDigit(),
-            'created_at' => now(),
-            'updated_at' => now()
-        ]);
+
+        $data = [];
+        $kind_names = [
+            "SpiderMan",
+            "SuperMan",
+            "SpyGirl",
+            "BadBoy"
+        ];
+
+        foreach($kind_names as $kind_name){
+
+            $data[] = [
+                'name' => $kind_name,
+                'current_health_points' => $this->faker->numberBetween(1,500),
+                'max_health_points' => $this->faker->numberBetween(1,5000),
+                'current_strength_points' => $this->faker->numberBetween(1,500),
+                'current_money' => $this->faker->numberBetween(100,10000),
+                'items_possessed' => $this->faker->randomDigit(),
+                'created_at' => now(),
+                'updated_at' => now()
+            ];
+        }
+
+        DB::table('kinds')->insert($data);
     }
 }

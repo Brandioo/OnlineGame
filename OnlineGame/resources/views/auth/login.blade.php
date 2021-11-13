@@ -50,8 +50,6 @@
             $("#loginForm").submit(function (event) {
                 event.preventDefault();
 
-
-
                 $.ajax({
                     type: "POST",
                     url: base_api_url + "/login",
