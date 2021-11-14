@@ -6,15 +6,23 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreFightRequest;
 use App\Http\Resources\FightResource;
 use App\Models\Fight;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class FightController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $fights = Fight::where('host_id', Auth::id())
-            ->orWhere('guest_id', Auth::id())
-            ->get();
+        if($request->input('hero_id')) {
+            $fights = Fight::where('host_id', $request->hero_id)
+                ->orWhere('guest_id', $request->hero_id)
+                ->get();
+
+        } else {
+            $fights = Fight::where('host_id', Auth::id())
+                ->orWhere('guest_id', Auth::id())
+                ->get();
+        }
 
         return FightResource::collection($fights);
 

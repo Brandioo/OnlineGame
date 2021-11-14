@@ -7,9 +7,9 @@ use App\Http\Controllers\Controller;
 class HeroesController extends Controller
 {
 
-    public function hero()
+    public function show($id)
     {
-        return view('heroes.index');
+        return view('heroes.show', compact('id'));
     }
 
     public function create()

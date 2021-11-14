@@ -20,7 +20,7 @@
                         </div>
                         <br/>
                         <form id="createHeroForm">
-                            <h3 class="btn-outline-dark">Hero details</h3>
+                            <h3 class="btn-outline-dark">Hero Details</h3>
                             <input name="kind_id" type="hidden" class="kind__attribute" data-name="id" value="">
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">

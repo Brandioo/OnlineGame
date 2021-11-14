@@ -10,10 +10,10 @@ use Illuminate\Http\Request;
 class FightController extends Controller
 {
 
-    public function fights()
+    public function fights(Request $request)
     {
-        $fights = Fight::all();
-        return view('/fights/index', compact('fights'));
+
+        return view('fights.index');
     }
 
     public function create()
