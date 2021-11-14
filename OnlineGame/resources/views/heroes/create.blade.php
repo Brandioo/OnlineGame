@@ -15,6 +15,10 @@
                         </div>
                     </div>
                     <div class="col-lg-9">
+                        <div class="alert alert-danger error" style="display:none;">
+                            <p class="alert__main"></p>
+                        </div>
+                        <br/>
                         <form id="createHeroForm">
                             <h3 class="btn-outline-dark">Hero Details</h3>
                             <input name="kind_id" type="hidden" class="kind__attribute" data-name="id" value="">
