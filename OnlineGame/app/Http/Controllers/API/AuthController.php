@@ -30,10 +30,7 @@ class AuthController extends Controller
             'email' => $request->input('email'),
             'password' => Hash::make($request->input('password'))
         ]);
-
-        if (!$user) {
-                   $this->register();
-        }
+      
         return $this->respondWithToken(auth()->tokenById($user->id));
     }
 
