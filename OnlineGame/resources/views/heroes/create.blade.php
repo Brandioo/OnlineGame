@@ -15,7 +15,7 @@
                         </div>
                     </div>
                     <div class="col-lg-9">
-                        <div class="alert alert-danger error">
+                        <div class="alert alert-danger error" style="display:none;">
                             <p class="alert__main"></p>
                         </div>
                         <br/>

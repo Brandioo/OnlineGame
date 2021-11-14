@@ -32,6 +32,7 @@ Route::group([
 
     Route::get('heroes', [HeroController::class, 'index']);
     Route::post('heroes', [HeroController::class, 'store']);
+    Route::get('opponentHero', [HeroController::class, 'opponentHero']);
     Route::get('kinds', [KindController::class, 'index']);
 
     Route::get('fights', [FightController::class, 'index']);

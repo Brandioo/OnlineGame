@@ -23,6 +23,13 @@ class HeroController extends Controller
 
     }
 
+    public function opponentHero()
+    {
+        $heroes = Hero::where('user_id', '<>', Auth::id())->get();
+
+        return HeroResource::collection($heroes);
+    }
+
       /**
      * Store a newly created resource in storage.
      *
