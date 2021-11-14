@@ -14,4 +14,10 @@
     display: none;
     color: red;
 }
-
+.home-card-margin {
+    margin: 5rem;
+}
+.home-card-title {
+    font-size: 20px;
+    font-weight: 600;
+}

@@ -15,6 +15,10 @@
                         </div>
                     </div>
                     <div class="col-lg-9">
+                        <div class="alert alert-danger error">
+                            <p class="alert__main"></p>
+                        </div>
+                        <br/>
                         <form id="createHeroForm">
                             <h3 class="btn-outline-dark">Hero details</h3>
                             <input name="kind_id" type="hidden" class="kind__attribute" data-name="id" value="">
@@ -48,6 +52,7 @@
                                     <input name="name" type="text" class="form-control" placeholder="" aria-label=""
                                            aria-describedby="basic-addon1">
                                 </div>
+                                <span class="error"></span>
                                 <br>
                                 <input type="submit" value="Submit" class="btn btn-primary">
                             </div>
@@ -141,15 +146,15 @@
                     encode: true,
                     success: function (data) {
                         console.log(data);
-                        alert('Successfully Registered!');
-                        window.location = `${base_url}/hero`
+                        alert('Successfully created!');
+                        window.location = `${base_url}/dashboard`
                     },
                     error: function (xhr) {
 
                         $('.alert.alert-danger').show();
                         $('.alert p.alert__main').text(xhr.responseJSON.message);
 
-                        if (xhr.responseJSON.errors) {
+                        if(xhr.responseJSON.errors) {
                             $.each(xhr.responseJSON.errors, function (key, valueAsArray) {
                                 $(`input[name=${key}]`).addClass('is-invalid');
                                 $(`input[name=${key}]`).siblings('span.error').text(valueAsArray.join("\n")).show();

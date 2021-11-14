@@ -31,7 +31,24 @@ class HeroController extends Controller
        */
     public function store(StoreHeroRequest $request)
     {
-        $hero = Hero::create($request->validated());
+        $kind = Kind::findORFail($request->input('kind_id'));
+
+        $hero = Hero::create(
+            [
+                'kind_id' => $request->input('kind_id'),
+                'name' => $request->input('name'),
+                'user_id' => Auth::id(),
+                'current_health_points' => $kind->current_health_points,
+                'max_health_points' => $kind->max_health_points,
+                'current_strength_points' => $kind->current_strength_points,
+                'current_money' => $kind->current_money,
+                'items_possessed' => $kind->items_possessed,
+                'performed_fights' => 0,
+                'money_tranfers' => 0,
+                'power' => 0,
+                'attack_points' => 0,
+            ]
+        );
 
         if ($hero) {
 

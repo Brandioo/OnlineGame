@@ -6,10 +6,8 @@
                 <span class="sr-only">Home</span>
                 <span class="icon logo" aria-hidden="true"></span>
                 <div class="logo-text">
-                    <span class="logo-title">Elegant</span>
-                    <span class="logo-subtitle">Dashboard</span>
+                    <span class="logo-title">Online Game</span>
                 </div>
-
             </a>
             <button class="sidebar-toggle transparent-btn" title="Menu" type="button">
                 <span class="sr-only">Toggle menu</span>
@@ -74,16 +72,5 @@
                 </li>
             </ul>
         </div>
-    </div>
-    <div class="sidebar-footer">
-        <a href="##" class="sidebar-user">
-            <span class="sidebar-user-img">
-                <picture><source srcset="https://lwlies.com/wp-content/uploads/2017/04/avatar-2009-1108x0-c-default.jpg" type="image/webp"><img src="https://lwlies.com/wp-content/uploads/2017/04/avatar-2009-1108x0-c-default.jpg" alt="User name"></picture>
-            </span>
-            <div class="sidebar-user-info">
-                <span class="sidebar-user__title">Nafisa Sh.</span>
-                <span class="sidebar-user__subtitle">Support manager</span>
-            </div>
-        </a>
     </div>
 </aside>

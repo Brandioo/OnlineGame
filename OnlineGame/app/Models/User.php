@@ -46,4 +46,9 @@ class User extends Authenticatable implements JWTSubject
     {
         return $this->hasMany(Hero::class);
     }
+    
+    public function getFullNameAttribute() 
+    {
+        return $this->first_name . " " . $this->last_name;
+    }
 }
