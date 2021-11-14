@@ -493,10 +493,9 @@
         isNotTokenPresent();
 
         $(document).ready(function () {
-
             $.ajax({
                 type: "GET",
-                url: `${base_api_url}/me`,
+                url: `${base_api_url}/heroes`,
                 beforeSend: function(request) {
                     request.setRequestHeader("Accept", 'application/json');
                     request.setRequestHeader("'Content-Type'", 'application/json');
@@ -505,26 +504,19 @@
                 dataType: "json",
                 encode: true,
                 success: function (data) {
-                    console.log(data);
-                    alert('succes');
-                },
-                error: function (xhr) {
-                    alert('error');
-                    redirectToLogin();
-                }
-            }).done(function (data) {
-                console.log(data);
-            });
-        })
-
-        $(document).ready(function () {
-            $.ajax({
-                type: "GET",
-                url: `${base_api_url}/heroes`,
-                beforeSend: function(request) {
-                    request.setRequestHeader("Accept", 'application/json');
-                    request.setRequestHeader("'Content-Type'", 'application/json');
-                    request.setRequestHeader("Authorization", `Bearer ${sessionStorage.getItem('token')}`);
+                    $('#quick-links').append(
+                        `<li>
+                            <a class="info" href="##">
+                                <div class="quick-links-icon">
+                                    <span class="icon time-circle" aria-hidden="true"></span>
+                                </div>
+                                <div class="quick-links-text">
+                                    <span class="quick-links__title">Recent files</span>
+                                    <span class="quick-links__subtitle">Recent uploaded files</span>
+                                </div>
+                            </a>
+                        </li>`
+                    );
                 },
                 error: function (xhr) {
                     alert('error');

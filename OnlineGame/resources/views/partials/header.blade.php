@@ -12,15 +12,10 @@
             </div>
         </div>
         <div class="main-nav-end">
-            <span class="hello">Hello</span>
-            <button type="button" class="btn btn-light" onclick="redirectToLogin()">Log Out</button>
+            <span>Hello</span>
+            <span class="hello" style="color: #083994; font-weight: 600;"></span>
+            <button type="button" class="btn btn-light" onclick="redirectToHome()">Log Out</button>
         </div>
     </div>
 </nav>
-@section('afterScripts')
-    <script>
-        let user = JSON.parse(sessionStorage.getItem('user'));
-        $('.hello').text(user['full_name']);
-    </script>
-@endsection
 
