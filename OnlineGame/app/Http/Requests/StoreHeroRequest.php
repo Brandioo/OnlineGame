@@ -26,7 +26,7 @@ class StoreHeroRequest extends FormRequest
     {
         return [
             'name'=> 'required|max:255',
-            'kind_id'=> 'required|max:255',
+            'kind_id'=> 'required|exists:kinds,id|max:255',
         ];
     }
 }

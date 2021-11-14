@@ -67,6 +67,7 @@
                         console.log(data);
                         alert('You have been successfully logged in!');
                         sessionStorage.setItem('token', data.access_token);
+                        sessionStorage.setItem('user', JSON.stringify(data.user));
                         window.location = `${base_url}/dashboard`
                     },
                     error: function (xhr) {

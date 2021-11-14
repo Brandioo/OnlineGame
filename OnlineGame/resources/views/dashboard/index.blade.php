@@ -6,98 +6,68 @@
             <h2 class="main-title">Media Library</h2>
             <div class="media-content">
                 <div class="row">
-                    <div class="col-lg-3">
-                        <h3 class="media-sidebar__title">Quick links</h3>
-                        <div class="media-sidebar">
-                            <ul class="quick-links">
-                                <li id="heroes-list">
-                                    <a class="info" href="##">
-                                        <div class="quick-links-icon">
-                                            <span class="icon time-circle" aria-hidden="true"></span>
-                                        </div>
-                                        <div class="quick-links-text">
-                                            <span class="quick-links__title">Recent files</span>
-                                            <span class="quick-links__subtitle">Recent uploaded files</span>
-                                        </div>
-                                    </a>
-                                </li>
-                        <a href="{{route('heroes.create')}}" class="btn-primary btn"type="submit">Create Hero's</a>
-                       <div class="media-sidebar">
-                           <ul class="quick-links">
-                               <li>
-                                   <a class="info" href="">
-                                       <div class="quick-links-icon">
-                                           <span class="icon time-circle" aria-hidden="true"></span>
-                                       </div>
-                                       <div class="quick-links-text">
-                                           <span class="quick-links__title">Goku</span>
-                                           <span class="quick-links__subtitle">Dragon ball</span>
-                                       </div>
-                                   </a>
-                               </li>
-                               <li>
-                                   <a class="success" href="##">
-                                       <div class="quick-links-icon">
-                                           <span class="icon google-drive" aria-hidden="true"></span>
-                                       </div>
-                                       <div class="quick-links-text">
-                                           <span class="quick-links__title">Naruto</span>
-                                           <span class="quick-links__subtitle">Naruto</span>
-                                       </div>
-                                   </a>
-                               </li>
-                               <li>
-                                   <a class="primary" href="##">
-                                       <div class="quick-links-icon">
-                                           <span class="icon dropbox" aria-hidden="true"></span>
-                                      </div>
-                                        <div class="quick-links-text">
-                                            <span class="quick-links__title">SpiderMan</span>
-                                            <span class="quick-links__subtitle">Marvel</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="warning" href="##">
-                                        <div class="quick-links-icon">
-                                            <span class="icon star" aria-hidden="true"></span>
-                                        </div>
-                                        <div class="quick-links-text">
-                                            <span class="quick-links__title">Vegeta</span>
-                                            <span class="quick-links__subtitle">Dargon Ball</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="danger" href="##">
-                                        <div class="quick-links-icon">
-                                            <span class="icon delete" aria-hidden="true"></span>
-                                        </div>
-                                        <div class="quick-links-text">
-                                            <span class="quick-links__title">Luffy</span>
-                                            <span class="quick-links__subtitle">One Pice</span>
-                                        </div>
-                                    </a>
-                               </li>
-                            </ul>
-                            <div class="storage">
-                                <span class="storage__indicator">Free</span>
-                                <h4 class="storage__title">Storage</h4>
-                                <div class="progress">
-                                    <div class="progress-bar fill-25" role="progressbar"></div>
-                                </div>
-                                <p class="storage__info">4.06 GB (32%) of 15 GB used</p>
-                            </div>
-                            <div class="upgrade">
-                                <p>Upgrade to <b>PRO</b> for get unlimited storage.</p>
-                                <a class="upgrade-btn" href="##">Upgrade now
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                         stroke-linejoin="round" class="feather feather-chevron-right">
-                                        <polyline points="9 18 15 12 9 6"></polyline>
-                                    </svg>
-                                </a>
-                            </div>
+                    <div class="col-lg-6">
+                        <div>
+                           <a href="{{route('heroes.create')}}" class="btn-primary btn" style="margin: 20px 0" type="submit">Create Hero's</a>
+                           <div class="media-sidebar">
+                               <ul class="quick-links">
+                                   <li>
+                                       <a class="info" href="">
+                                           <div class="quick-links-icon">
+                                               <span class="icon time-circle" aria-hidden="true"></span>
+                                           </div>
+                                           <div class="quick-links-text">
+                                               <span class="quick-links__title">Goku</span>
+                                               <span class="quick-links__subtitle">Dragon ball</span>
+                                           </div>
+                                       </a>
+                                   </li>
+                                   <li>
+                                       <a class="success" href="##">
+                                           <div class="quick-links-icon">
+                                               <span class="icon google-drive" aria-hidden="true"></span>
+                                           </div>
+                                           <div class="quick-links-text">
+                                               <span class="quick-links__title">Naruto</span>
+                                               <span class="quick-links__subtitle">Naruto</span>
+                                           </div>
+                                       </a>
+                                   </li>
+                                    <li>
+                                       <a class="primary" href="##">
+                                           <div class="quick-links-icon">
+                                               <span class="icon dropbox" aria-hidden="true"></span>
+                                          </div>
+                                            <div class="quick-links-text">
+                                                <span class="quick-links__title">SpiderMan</span>
+                                                <span class="quick-links__subtitle">Marvel</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="warning" href="##">
+                                            <div class="quick-links-icon">
+                                                <span class="icon star" aria-hidden="true"></span>
+                                            </div>
+                                            <div class="quick-links-text">
+                                                <span class="quick-links__title">Vegeta</span>
+                                                <span class="quick-links__subtitle">Dargon Ball</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="danger" href="##">
+                                            <div class="quick-links-icon">
+                                                <span class="icon delete" aria-hidden="true"></span>
+                                            </div>
+                                            <div class="quick-links-text">
+                                                <span class="quick-links__title">Luffy</span>
+                                                <span class="quick-links__subtitle">One Pice</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                               </ul>
+                           </div>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -511,31 +481,6 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="library-table-sum">
-                            <p><span class="checked-sum">0</span> Item selected</p>
-                            <button class="media-table-btn" type="button">Assign to folder</button>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="media-dropzone">
-                            <h3 class="media-dropzone__title media-sidebar__title">Import new files</h3>
-                            <p class="media-dropzone__subtitle">Just drag and drop the files and assign to right
-                                folder.</p>
-                            <div class="dropzone-wrapper dz-clickable" id="dropzone">
-                                <div class="dropzone-start">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                         stroke-linejoin="round" class="feather feather-upload-cloud"
-                                         aria-hidden="true">
-                                        <polyline points="16 16 12 12 8 16"></polyline>
-                                        <line x1="12" y1="12" x2="12" y2="21"></line>
-                                        <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path>
-                                        <polyline points="16 16 12 12 8 16"></polyline>
-                                    </svg>
-                                    <p class="dropzone-hint">Drop files to upload or</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -580,23 +525,6 @@
                     request.setRequestHeader("Accept", 'application/json');
                     request.setRequestHeader("'Content-Type'", 'application/json');
                     request.setRequestHeader("Authorization", `Bearer ${sessionStorage.getItem('token')}`);
-                },
-                dataType: "json",
-                encode: true,
-                success: function (data) {
-                    $('#quick-links').append(
-                        <li id="heroes-list">
-                            <a class="info" href="##">
-                                <div class="quick-links-icon">
-                                    <span class="icon time-circle" aria-hidden="true"></span>
-                                </div>
-                                <div class="quick-links-text">
-                                    <span class="quick-links__title">Recent files</span>
-                                    <span class="quick-links__subtitle">Recent uploaded files</span>
-                                </div>
-                            </a>
-                        </li>
-                    );
                 },
                 error: function (xhr) {
                     alert('error');

@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css" rel="stylesheet">
 <script>
-    window.base_url = 'http://localhost:8000';
+    window.base_url = '{{ url('/') }}';
     window.base_api_url = window.base_url +`/api`;
 </script>
 
