@@ -23,7 +23,7 @@
                     <a href="/dashboard"><span class="icon home" aria-hidden="true"></span>Dashboard</a>
                 </li>
                 <li>
-                    <a class="show-cat-btn" href="/fights">
+                    <a class="show-cat-btn" href="heroes/1">
                         <span class="icon folder" aria-hidden="true"></span>Fight History
                         <span class="category__btn transparent-btn" title="Open list">
                             <span class="sr-only">Open list</span>

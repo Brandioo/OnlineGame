@@ -10,12 +10,12 @@
                         <div class="users-table table-wrapper">
                             <table id="fightsTable">
                                 <thead>
-                                    <tr class="users-table-info">
-                                        <th>Host</th>
-                                        <th>Guest</th>
-                                        <th>Fought At</th>
-                                        <th>Winner</th>
-                                    </tr>
+                                <tr class="users-table-info">
+                                    <th>Host</th>
+                                    <th>Guest</th>
+                                    <th>Fought At</th>
+                                    <th>Winner</th>
+                                </tr>
                                 </thead>
                                 <tbody>
                                 </tbody>
@@ -54,7 +54,18 @@
                                 `<tr>
                                     <td>${fight.host.name}</td>
                                     <td>${fight.guest.name}</td>
-                                    <td>${fight.fought_at}</td><!-- ToDo: if fought at is null then show a button to accept or not the invitation for fighting -->
+                                    <?php
+                                if (${fight.fought_at} == null) {
+                                    ?>
+
+                                      <?php
+                                } else {
+                                    ?>
+                                <td>${fight.fought_at}</td><!-- ToDo: if fought at is null then show a button to accept or not the invitation for fighting -->
+                                    <?php
+                                }
+                                ?>
+
                                     <td>${fight.winner ? fight.winner.name : ""}</td>
                                 </tr>`
                             );
