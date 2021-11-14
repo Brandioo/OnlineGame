@@ -68,8 +68,6 @@
         isNotTokenPresent();
 
         $(document).ready(function () {
-
-
             $.ajax({
                 type: "GET",
                 url: `${base_api_url}/kinds`,
@@ -165,6 +163,7 @@
                     console.log(data);
                 });
             });
+
         })
     </script>
 @endsection
