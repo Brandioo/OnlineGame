@@ -50,6 +50,8 @@
     <script>
         isNotTokenPresent();
 
+        var current_hero = null;
+
         $(document).ready(function () {
             $.ajax({
                 type: "GET",
@@ -61,6 +63,8 @@
                 },
                 success: function (response) {
                     if (response.data && response.data.length > 0) {
+                        current_hero = response.data[0].id;
+
                         $.each(response.data, function (index, element) {
                             $("#hero__list").append(
                                 `<li>
@@ -132,6 +136,8 @@
         })
 
         function getFightsFromHeroId(id){
+            current_hero = id;
+
             $.ajax({
                 type: "GET",
                 url: `${base_api_url}/fights/`,
@@ -171,9 +177,37 @@
             });
         }
 
-        function fight(hero_id){
-            alert('invitation for fight has been sent!')
-            // ToDo: ajax post to fight this hero
+        function fight(guest_id){
+
+            $.ajax({
+                type: "POST",
+                url: base_api_url + "/fights",
+                beforeSend: function (request) {
+                    request.setRequestHeader("Accept", 'application/json');
+                    request.setRequestHeader("'Content-Type'", 'application/json');
+                    request.setRequestHeader("Authorization", `Bearer ${sessionStorage.getItem('token')}`);
+
+                    $('.error').hide();
+                    $('.error').siblings('input').removeClass('is-invalid');
+                },
+                data: {
+                    host_id: current_hero,
+                    guest_id: guest_id
+                },
+                dataType: "json",
+                encode: true,
+                success: function (data) {
+                    console.log(data);
+                    alert('invitation for fight has been sent!')
+                    window.location = `${base_url}/dashboard`
+                },
+                error: function (xhr) {
+                    alert('something went wrong');
+                }
+            }).done(function (data) {
+                console.log(data);
+            });
+
         }
     </script>
 @endsection
