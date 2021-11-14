@@ -36,6 +36,7 @@ Route::get('rank', [ItemController::class, 'rank'])->name('rank');
 Route::get('users', [UsersController::class, 'users'])->name('users');
 
 Route::get('heroes/create', [HeroesController::class, 'create'])->name('heroes.create');
-Route::get('hero', [HeroesController::class, 'hero'])->name('hero');
+Route::get('heroes/{id}', [HeroesController::class, 'show'])->name('heroes.show');
 
+Route::get('fights/create', [HeroesController::class, 'create'])->name('fights.create');
 Route::get('fights', [FightController::class, 'fights'])->name('fights');

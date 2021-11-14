@@ -9,7 +9,7 @@
                     <div class="col-lg-6">
                         <div>
                             <a href="{{route('heroes.create')}}" class="btn-primary btn" style="margin: 20px 0"
-                               type="submit">Create Hero's</a>
+                               type="submit">Create Hero</a>
                             <div class="media-sidebar">
                                 <ul id="hero__list" class="quick-links">
                                 </ul>
@@ -89,10 +89,6 @@
                 },
                 dataType: "json",
                 encode: true,
-                success: function (data) {
-                    console.log(data);
-                    alert('Success');
-                },
                 error: function (xhr) {
                     alert('error');
                     redirectToLogin();
@@ -116,7 +112,7 @@
                         $.each(response.data, function (index, element) {
                             $("#hero__list").append(
                                 `<li>
-                                    <a class="info hero__info" href="javascript:;" data-kind='${JSON.stringify(element)}'>
+                                    <a class="info hero__info" href="javascript:;" data-kind='${JSON.stringify(element)}'
                                         <div class="quick-links-icon">
                                             <span class="icon time-circle" aria-hidden="true"></span>
                                         </div>
