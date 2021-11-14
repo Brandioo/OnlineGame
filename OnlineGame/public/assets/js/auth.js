@@ -17,10 +17,10 @@ window.isTokenPresent = function () {
     }
 }
 
-window.redirectToLogin = function () {
+window.redirectToHome = function () {
     sessionStorage.removeItem('token');
 
-    window.location = base_url + '/login';
+    window.location = base_url + '/';
 }
 
 
