@@ -15,11 +15,11 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-9">
-                            <div class="alert alert-danger error">
-                                <p class="alert__main"></p>
-                            </div>
-                        </div>
+{{--                        <div class="col-lg-9">--}}
+{{--                            <div class="alert alert-danger error">--}}
+{{--                                <p class="alert__main"></p>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
                     </div>
                     <div class="col-lg-6">
                         <div class="users-table table-wrapper">
